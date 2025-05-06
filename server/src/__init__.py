@@ -8,5 +8,3 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 # flask_cors: Cross Origin Resource Sharing (CORS), making cross-origin AJAX possible.
 CORS(app)
-
-from src import views

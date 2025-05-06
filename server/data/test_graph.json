@@ -1,0 +1,15 @@
+{
+    "nodes": [
+      { "index": 1, "word": "alpha",   "messages": [100, 101] },
+      { "index": 2, "word": "bravo",   "messages": [102] },
+      { "index": 3, "word": "charlie", "messages": [103, 104, 105] },
+      { "index": 4, "word": "delta",   "messages": [] },
+      { "index": 5, "word": "echo",    "messages": [106] }
+    ],
+    "links": [
+      { "source": 1, "target": 2, "weight": 1 },
+      { "source": 2, "target": 4, "weight": 2 },
+      { "source": 3, "target": 5, "weight": 1 }
+    ]
+  }
+  

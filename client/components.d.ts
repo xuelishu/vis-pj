@@ -7,22 +7,20 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ExampleComponent: typeof import('./src/components/ExampleComponent.vue')['default']
+    BackCircle: typeof import('./src/components/BackCircle.vue')['default']
+    Map: typeof import('./src/components/Map.vue')['default']
+    Messages: typeof import('./src/components/Messages.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TheAggregatedCommodityDistributionView: typeof import('./src/components/TheAggregatedCommodityDistributionView.vue')['default']
     TheAggregatedVesselMovementView: typeof import('./src/components/TheAggregatedVesselMovementView.vue')['default']
     TheCommoditySelector: typeof import('./src/components/TheCommoditySelector.vue')['default']
-    TheCounter: typeof import('./src/components/TheCounter.vue')['default']
     TheDateSelector: typeof import('./src/components/TheDateSelector.vue')['default']
-    TheFooter: typeof import('./src/components/TheFooter.vue')['default']
-    TheInput: typeof import('./src/components/TheInput.vue')['default']
     TheLocationLegend: typeof import('./src/components/TheLocationLegend.vue')['default']
     TheLocationSelector: typeof import('./src/components/TheLocationSelector.vue')['default']
-    TheMainView2: typeof import('./src/components/TheMainView2.vue')['default']
     TheVesselMovementView: typeof import('./src/components/TheVesselMovementView.vue')['default']
     TheVesselSelector: typeof import('./src/components/TheVesselSelector.vue')['default']
     TheVesselTSNE: typeof import('./src/components/TheVesselTSNE.vue')['default']
     TheVesselTypeLegend: typeof import('./src/components/TheVesselTypeLegend.vue')['default']
+    Timeline: typeof import('./src/components/Timeline.vue')['default']
   }
 }
