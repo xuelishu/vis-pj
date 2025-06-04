@@ -34,7 +34,13 @@
           </span>
         </div>
       </div>
-      <div id="right-col"></div>
+      <div id="right-col">
+<img
+  :src="`/${message.topic}.svg`"
+  alt="topic icon"
+  class="topic-icon"
+/>
+      </div>
     </div>
     <div v-if="showMenu" class="action-menu">
       <el-button
@@ -81,7 +87,7 @@ function removeFromBlacklist() {
 
 const colorSentiment = computed(() => {
   const e = props.message.emotion
-  return e <= 0.5? d3.interpolateRgb("red", "white")(e * 2): d3.interpolateRgb("white", "green")((e - 0.5) * 2)})
+  return e <= 0.5? d3.interpolateRgb("red", "yellow")(e * 2): d3.interpolateRgb("yellow", "green")((e - 0.5) * 2)})
 </script>
 
 <style scoped>
@@ -178,4 +184,25 @@ const colorSentiment = computed(() => {
 .location-text {
   color: pink;
 }
+.topic-icon {
+width: 100%;
+height: 100%;
+object-fit: contain;
+
+/* 整张图先变成浅灰色：先灰度化 + 提亮一下 */
+filter: grayscale(100%) brightness(150%);
+
+/* 从右到左的透明度渐变：从 0.8 过渡到 0 */
+-webkit-mask-image: linear-gradient(
+  to left,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0)
+);
+mask-image: linear-gradient(
+  to left,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0)
+);
+-webkit-mask-repeat: no-repeat;
+mask-repeat: no-repeat;}
 </style>

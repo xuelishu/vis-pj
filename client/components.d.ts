@@ -8,7 +8,10 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     BackCircle: typeof import('./src/components/BackCircle.vue')['default']
+    copy: typeof import('./src/components/Timeline copy.vue')['default']
     Map: typeof import('./src/components/Map.vue')['default']
+    MapOld: typeof import('./src/components/Map-old.vue')['default']
+    MapOrigin: typeof import('./src/components/Map-origin.vue')['default']
     Messages: typeof import('./src/components/Messages.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -22,5 +25,8 @@ declare module 'vue' {
     TheVesselTSNE: typeof import('./src/components/TheVesselTSNE.vue')['default']
     TheVesselTypeLegend: typeof import('./src/components/TheVesselTypeLegend.vue')['default']
     Timeline: typeof import('./src/components/Timeline.vue')['default']
+    Timeline1: typeof import('./src/components/Timeline1.vue')['default']
+    TopicCircle: typeof import('./src/components/TopicCircle.vue')['default']
+    WordCloud: typeof import('./src/components/WordCloud.vue')['default']
   }
 }
