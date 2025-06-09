@@ -78,7 +78,7 @@ const initChart = () => {
             name: 'Topics',
             type: 'pie',
             // 外环：从 60% 到 80%
-            radius: ['60%', '80%'],
+            radius: ['50%', '70%'],
             center: ['50%', '50%'],
             avoidLabelOverlap: false,
             label: {
@@ -118,7 +118,7 @@ const initChart = () => {
             name: 'Special Words',
             type: 'pie',
             // 内环：从 30% 到 50%
-            radius: ['30%', '50%'],
+            radius: ['20%', '40%'],
             center: ['50%', '50%'],
             avoidLabelOverlap: false,
             label: {

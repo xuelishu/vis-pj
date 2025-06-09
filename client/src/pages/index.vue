@@ -122,10 +122,10 @@
           class="search-input"
           style="margin-left: 25px;"
         />
-        <button class="btn-check" @click="applySearch" style="margin-left: 15px;">
+        <button class="btn-check" @click="applySearch" style="margin-left: 3px;">
           √
         </button>
-        <button class="btn-add" @click="addSomething" style="margin-left: 15px;">
+        <button class="btn-add" @click="addSomething" style="margin-left: 3px;">
           Add
         </button>
         <label class="switch">

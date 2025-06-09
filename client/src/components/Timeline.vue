@@ -37,6 +37,7 @@ filterParams: {
         // 清空旧图
         d3.select(this.$refs.axisContainer).selectAll('*').remove();
         d3.select(this.$refs.areaSvg).selectAll('*').remove();
+        d3.select(this.$refs.container).selectAll('.brush-overlay').remove();
         // 用新的 payload 去拿数据并画图
         this.fetchAndDraw(newPayload);
       },
@@ -185,8 +186,8 @@ drawChart(rawArray) {
       if (!event.selection) return
       const [y0, y1] = event.selection
       // 下面计算映射到时间，需要减掉 marginTop，因为坐标轴是从 marginTop 开始
-      const t0 = yScale.invert(y0-90)
-      const t1 = yScale.invert(y1-90)
+      const t0 = yScale.invert(y0-65)
+      const t1 = yScale.invert(y1-65)
       this.$store.dispatch('setTimeRange', { start: t0, end: t1 })
       this.$emit('nowtime', [t0, t1])
       console.log(y0)
